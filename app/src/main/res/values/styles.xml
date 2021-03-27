@@ -23,4 +23,25 @@
         <item name="android:textSize">@dimen/text_size</item>
     </style>
 
+    <style name="pageTitleStyle">
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:paddingTop">@dimen/large_padding</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="pageSubtitleStyle">
+        <item name="android:layout_marginTop">@dimen/small_margin</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="instructionStepStyle">
+        <item name="android:layout_marginTop">@dimen/large_margin</item>
+        <item name="android:paddingStart">@dimen/small_padding</item>
+        <item name="android:paddingEnd">@dimen/small_padding</item>
+        <item name="android:textSize">@dimen/large_text_size</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
 </resources>
