@@ -9,4 +9,7 @@
     <string name="register">Register</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="welcome">Welcome</string>
+    <string name="welcome_subtitle">Nice shoes make life easier to walk</string>
+    <string name="instructions">Walk over instructions</string>
 </resources>

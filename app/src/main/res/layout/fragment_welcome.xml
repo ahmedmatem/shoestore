@@ -3,15 +3,37 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".welcome.WelcomeFragment">
 
-    <FrameLayout
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <!-- TODO: Update blank fragment layout -->
+
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/hello_blank_fragment" />
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:gravity="center_horizontal"
+            android:paddingTop="@dimen/large_padding"
+            android:text="@string/welcome"
+            android:textAllCaps="true"
+            android:textSize="24sp" />
 
-    </FrameLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_margin"
+            android:gravity="center_horizontal"
+            android:text="@string/welcome_subtitle"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/instructionsBtn"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/large_margin"
+            android:text="@string/instructions" />
+    </LinearLayout>
 </layout>
