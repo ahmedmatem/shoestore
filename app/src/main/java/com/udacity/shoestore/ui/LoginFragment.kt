@@ -5,11 +5,15 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentLoginBinding
 
+/**
+ * A simple [Fragment] subclass.
+ */
 class LoginFragment : Fragment() {
 
     override fun onCreateView(
@@ -17,13 +21,15 @@ class LoginFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val binding: FragmentLoginBinding =
-            DataBindingUtil.inflate(inflater, R.layout.fragment_login, container, false)
-        binding.loginBtn.setOnClickListener { view: View ->
-            view.findNavController().navigate(R.id.action_loginFragment_to_welcomeFragment)
-        }
-        binding.registerBtn.setOnClickListener { view ->
-            view.findNavController().navigate(R.id.action_loginFragment_to_welcomeFragment)
+        val binding: FragmentLoginBinding = DataBindingUtil.inflate(
+            inflater, R.layout.fragment_login, container, false
+        )
+
+        val buttons = listOf<Button>(binding.loginBtn, binding.registerBtn)
+        buttons.forEach { btn ->
+            btn.setOnClickListener { view ->
+                view.findNavController().navigate(R.id.action_loginFragment_to_welcomeFragment)
+            }
         }
         return binding.root
     }
