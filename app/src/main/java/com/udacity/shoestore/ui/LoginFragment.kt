@@ -7,14 +7,18 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.activityViewModels
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentLoginBinding
+import com.udacity.shoestore.viewmodels.ShoeViewModel
 
 /**
  * A simple [Fragment] subclass.
  */
 class LoginFragment : Fragment() {
+    private val shoeViewModel by activityViewModels<ShoeViewModel>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -24,6 +28,8 @@ class LoginFragment : Fragment() {
         val binding: FragmentLoginBinding = DataBindingUtil.inflate(
             inflater, R.layout.fragment_login, container, false
         )
+
+        shoeViewModel.shoes?.value?.clear()
 
         val buttons = listOf<Button>(binding.loginBtn, binding.registerBtn)
         buttons.forEach { btn ->
