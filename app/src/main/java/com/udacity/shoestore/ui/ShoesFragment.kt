@@ -11,6 +11,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentShoesBinding
+import com.udacity.shoestore.databinding.ShoeItemBinding
 import com.udacity.shoestore.viewmodels.ShoeViewModel
 
 /**
@@ -34,10 +35,11 @@ class ShoesFragment : Fragment() {
         _shoeViewModel.shoes.observe(viewLifecycleOwner, { shoes ->
             if(shoes.isNotEmpty()){
                 shoes.forEach { shoe ->
-                    addItemElement("Name: ${shoe.name}")
-                    addItemElement("Size: ${shoe.size}")
-                    addItemElement("Company: ${shoe.company}")
-                    addItemElement("Description: ${shoe.description}", LIST_ITEM_GAP)
+                    val shoeItemBinding = ShoeItemBinding.inflate(
+                        layoutInflater, null, false
+                    )
+                    shoeItemBinding.shoe = shoe
+                    binding.shoeListContainer.addView(shoeItemBinding.root)
                 }
             }
         })
@@ -57,20 +59,5 @@ class ShoesFragment : Fragment() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return NavigationUI.onNavDestinationSelected(item, requireView().findNavController()) ||
                 super.onOptionsItemSelected(item)
-    }
-
-    private fun addItemElement(text: String, bottomPadding: Int = 0){
-        val textView = TextView(requireActivity())
-        textView.apply {
-            this.text = text
-            textSize = 20f
-            gravity = Gravity.START
-            setPadding(16, 8, 16, bottomPadding)
-        }
-        binding.shoeListContainer.addView(textView)
-    }
-
-    companion object {
-        const val LIST_ITEM_GAP: Int = 32
     }
 }
