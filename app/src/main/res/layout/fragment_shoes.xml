@@ -22,6 +22,7 @@
 
         </ScrollView>
 
+<!--        Use this floating action button to add new shoes-->
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fab"
             android:layout_width="wrap_content"

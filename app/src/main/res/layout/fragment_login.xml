@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".ui.LoginFragment">
 
+    <!--    A simple login form-->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/fragmentLoginContainer"
         android:layout_width="match_parent"

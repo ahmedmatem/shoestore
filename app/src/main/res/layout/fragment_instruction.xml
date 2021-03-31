@@ -3,17 +3,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".ui.InstructionFragment">
 
+    <!--    This vertical linear layout provide several steps of instruction
+    that used identical styling - @style/instructionStepStyle-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-
         <TextView
+            style="@style/pageTitleStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            style="@style/pageTitleStyle"
             android:text="@string/instructions" />
 
         <TextView
@@ -23,43 +24,43 @@
             android:text="@string/instruction_subtitle" />
 
         <TextView
+            style="@style/instructionStepStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/step_1"
-            style="@style/instructionStepStyle" />
+            android:text="@string/step_1" />
 
         <TextView
+            style="@style/instructionStepStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/step_2"
-            style="@style/instructionStepStyle"/>
+            android:text="@string/step_2" />
 
         <TextView
+            style="@style/instructionStepStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/step_3"
-            style="@style/instructionStepStyle"/>
+            android:text="@string/step_3" />
 
         <TextView
+            style="@style/instructionStepStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/step_4"
-            style="@style/instructionStepStyle"/>
+            android:text="@string/step_4" />
 
         <TextView
+            style="@style/instructionStepStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/step_5"
-            style="@style/instructionStepStyle"/>
+            android:text="@string/step_5" />
 
         <Button
             android:id="@+id/shoppingListBtn"
+            style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:layout_marginTop="@dimen/large_margin"
-            android:text="@string/start_shopping"
-            style="@style/Widget.AppCompat.Button.Colored"
-            android:layout_gravity="center_horizontal"/>
+            android:text="@string/start_shopping" />
     </LinearLayout>
 
 </layout>
